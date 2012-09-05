@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>ATX FloodWatch</title>
+  <title>ATX Floods</title>
   <meta name="description" content="">
 
   <meta name="viewport" content="width=device-width">
@@ -22,21 +22,11 @@
         <ul class="nav">
           <li>
           <a class="brand" href="#">
-              FloodWatch Austin
+              <img src="img/atxfloods.png" height="37px" width="200px">
+              <div class="tagline">current flood information and road closures in the city of Austin</div>
+
           </a>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Resources
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li> link 1 </li>
-              <li> link 2 </li>
-              <li> link 3 </li>
-              <li> link 4 </li>
-            </ul>
-      </li>
     </ul>
        </ul>
       </div>
@@ -57,33 +47,98 @@
   <!--Body content-->
     <div class="container-fluid over">
       <div class="row-fluid">
-        <div class="span3">
-          <div class="sidebar">
-            <h1>Recent Updates</h1>
-            <h2>last updated: 10/12/12, 12:02am</h2>
-            <ul>
-              <li>most recent update<br>
-                <h2>date</h2>
-              </li>
-              <li>most recent update<br>
-                <h2>date</h2>
-              </li>
-              <li>most recent update<br>
-                <h2>date</h2>
-              </li>
-          </div>
-          <div class="sidebar">
-            <ul>
-              <li>0 - open</li>
-              <li>0 - closed</li>
-              <li>0 - exception</li>
-            </ul>
-          </div>
+        <div class="span8">
         </div>
-        <div class="span6">
+        <div class="span4">
+          <div class="sidebar">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active">
+                  <a href="#announce"><img src="img/announce.png"></a>
+                </li>
+                <li>
+                  <a href="#info"><img src="img/info.png"></a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                  <div class="tab-pane" id="announce" data-toggle="tab">
+                                         <!-- twitter widget with @atxfloods -->
+                      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                      <script>
+                      new TWTR.Widget({
+                        version: 2,
+                        type: 'profile',
+                        rpp: 4,
+                        interval: 30000,
+                        width: auto,
+                        height: 300,
+                        theme: {
+                          shell: {
+                            background: '#ffffff',
+                            color: '#ffffff'
+                          },
+                          tweets: {
+                            background: '#525252',
+                            color: '#555555',
+                            links: '#327f99'
+                          }
+                        },
+                        features: {
+                          scrollbar: false,
+                          loop: false,
+                          live: true,
+                          behavior: 'all'
+                        }
+                      }).render().setUser('atxfloods').start();
+                      </script>
+              <!-- twitter widget with #atxfloods -->
+                      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                      <script>
+                      new TWTR.Widget({
+                        version: 2,
+                        type: 'search',
+                        search: '#atxfloods',
+                        interval: 30000,
+                        title: 'Follow #atxfloods',
+                        subject: '',
+                        width: 'auto',
+                        height: 300,
+                        theme: {
+                          shell: {
+                            background: '#ffffff',
+                            color: '#327c94'
+                          },
+                          tweets: {
+                            background: '#ffffff',
+                            color: '#555555',
+                            links: '#327f99'
+                          }
+                        },
+                        features: {
+                          scrollbar: false,
+                          loop: true,
+                          live: true,
+                          behavior: 'default'
+                        }
+                      }).render().start();
+                      </script>
+                  </div>
+                  <div class="tab-pane active" id="info" data-toggle="tab">
+                    <h1>Resources</h1>
+                    <ul>
+                      <li>resource 1</li>
+                      <li>resource 1</li>
+                      <li>resource 1</li>
+                      <li>resource 1</li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+         </div>
         </div>
       </div>
     </div>
+  </div>
     <div id="map">
       <!-- place map -->
       <iframe src='https://emily.cartodb.com/tables/lwc_austin/embed_map' width='100%' height='600px'>
@@ -94,6 +149,14 @@
 
   <footer>
     <div class="navbar navbar-fixed-bottom">
+        <div class="span3">
+          <div class="sidebar key">
+            <ul>
+              <li><img src="img/key-open.png"> crossing is open</li>
+              <li><img src="img/key-closed.png"> crossing is closed</li>
+            </ul>
+          </div>
+        </div>
       <div class="navbar-inner">
       </div>
     </div>
