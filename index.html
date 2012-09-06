@@ -53,16 +53,26 @@
           <div class="sidebar">
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
-                <li class="active">
+                <li>
+                  <a href="#info"><img src="img/roadclose.png"></a>
+                </li>
+                <li>
                   <a href="#announce"><img src="img/announce.png"></a>
                 </li>
                 <li>
-                  <a href="#info"><img src="img/info.png"></a>
+                  <a href="#resources"><img src="img/info.png"></a>
                 </li>
               </ul>
               <div class="tab-content">
-                  <div class="tab-pane" id="announce" data-toggle="tab">
-                                         <!-- twitter widget with @atxfloods -->
+                <div class="tab-pane" id="info" data-toggle="tab">
+                    <h1>Save yourself! Turn around – don’t drown!</h1>
+                    <p>If there’s water flowing over the road, go back and find another route.
+                    Driving across a flooded road or bridge is the cause of 75% of flood-related fatalities.
+                    It’s illegal to drive around barricades at a flooded road.
+                    </p>  
+                </div>
+                <div class="tab-pane" id="announce" data-toggle="tab">
+                <!-- twitter widget with @atxfloods -->
                       <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
                       <script>
                       new TWTR.Widget({
@@ -123,13 +133,21 @@
                       }).render().start();
                       </script>
                   </div>
-                  <div class="tab-pane active" id="info" data-toggle="tab">
+                  <div class="tab-pane" id="resources" data-toggle="tab">
                     <h1>Resources</h1>
                     <ul>
-                      <li>resource 1</li>
-                      <li>resource 1</li>
-                      <li>resource 1</li>
-                      <li>resource 1</li>
+                      <li><a href="http://www.ci.austin.tx.us/fews/rainfall.cfm">Austin Rain Gauges </a>
+                      </li>
+                      <li><a href="http://www.ci.austin.tx.us/fews/water_level.cfm">Austin Creek Level Gauges</a>
+                      </li>
+                      <li><a href="http://hydromet.lcra.org/full.aspx">LCRA Hydromet</a>
+                      </li>
+                      <li><a hred="http://waterdata.usgs.gov/tx/nwis/rt">USGS Gauges</a>
+                      </li>
+                      <li><a href="http://www.centraltexashub.org/">Central Texas HUB</a>
+                      </li>
+                      <li> <a href="http://www.srh.noaa.gov/ewx/">National Weather Service</a>
+                      </li>
                     </ul>
                   </div>
               </div>
