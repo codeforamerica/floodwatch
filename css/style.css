@@ -106,13 +106,15 @@ td { vertical-align: top; }
   height: 37px;
 }
 .navbar-inner {
-  background-color: #ffffff;
-  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
-  background-image: linear-gradient(top, #ffffff, #ffffff);
+  background-color: #eeeeee;
+  background: url("../images/texture.png") repeat scroll 0 0 transparent;
+  background-image: -moz-linear-gradient(top, #eeeeee, #eaeaea);
+  background-image: -ms-linear-gradient(top, #eeeeee, #eaeaea);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#eaeaea));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #eaeaea);
+  background-image: -o-linear-gradient(top, #eeeeee, #eaeaea);
+  background-image: linear-gradient(top, #eeeeee, #eaeaea);
+  border-bottom: 2px #00649b solid;
   background-repeat: repeat-x;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
@@ -122,9 +124,15 @@ td { vertical-align: top; }
      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
-
+.tagline {
+    color: #555555;
+    font-style: italic;
+    font-size: 14px;
+    display: inline;
+    vertical-align: bottom;
+  }
 .sidebar {
-  background-color:rgba(255,255,255,0.8);
+  background-color:rgba(238,238,238,0.8);
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -140,6 +148,7 @@ td { vertical-align: top; }
   list-style: none;
   font-size: 17px;
   font-weight: 300;
+  line-height: 2em;
 }
 .sidebar h1 {
   font-size: 15px;
@@ -147,13 +156,21 @@ td { vertical-align: top; }
   font-weight: 300;
   text-transform: uppercase;
 }
+.key {
+  position: relative;
+  /* height must also be changed in navbar-fixed-bottom bottom px */
+  height: 100px;
+  top: -150px;
+  color: #555555;
+}
 .sidebar h2 {
   font-size: 12px;
   line-height: 20px;
   font-weight: 300;
 }
+/* bottom px must be set to height of key */
 .navbar-fixed-bottom {
-    bottom: -25px;
+    bottom: -125px;
 }
 #map {
   height: 600px;
