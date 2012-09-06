@@ -54,86 +54,28 @@
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
                 <li>
-                  <a href="#info"><img src="img/roadclose.png"></a>
+                  <a href="#info" data-toggle="tab"><img src="img/roadclose.png"></a>
                 </li>
                 <li>
-                  <a href="#announce"><img src="img/announce.png"></a>
+                  <a href="#announce" data-toggle="tab"><img src="img/announce.png"></a>
                 </li>
                 <li>
-                  <a href="#resources"><img src="img/info.png"></a>
+                  <a href="#resources" data-toggle="tab"><img src="img/info.png"></a>
                 </li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane" id="info" data-toggle="tab">
+                <div class="tab-pane" id="info">
                     <h1>Save yourself! Turn around – don’t drown!</h1>
                     <p>If there’s water flowing over the road, go back and find another route.
                     Driving across a flooded road or bridge is the cause of 75% of flood-related fatalities.
                     It’s illegal to drive around barricades at a flooded road.
                     </p>  
                 </div>
-                <div class="tab-pane" id="announce" data-toggle="tab">
+                <div class="tab-pane" id="announce">
                 <!-- twitter widget with @atxfloods -->
-                      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-                      <script>
-                      new TWTR.Widget({
-                        version: 2,
-                        type: 'profile',
-                        rpp: 4,
-                        interval: 30000,
-                        width: auto,
-                        height: 300,
-                        theme: {
-                          shell: {
-                            background: '#ffffff',
-                            color: '#ffffff'
-                          },
-                          tweets: {
-                            background: '#525252',
-                            color: '#555555',
-                            links: '#327f99'
-                          }
-                        },
-                        features: {
-                          scrollbar: false,
-                          loop: false,
-                          live: true,
-                          behavior: 'all'
-                        }
-                      }).render().setUser('atxfloods').start();
-                      </script>
-              <!-- twitter widget with #atxfloods -->
-                      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-                      <script>
-                      new TWTR.Widget({
-                        version: 2,
-                        type: 'search',
-                        search: '#atxfloods',
-                        interval: 30000,
-                        title: 'Follow #atxfloods',
-                        subject: '',
-                        width: 'auto',
-                        height: 300,
-                        theme: {
-                          shell: {
-                            background: '#ffffff',
-                            color: '#327c94'
-                          },
-                          tweets: {
-                            background: '#ffffff',
-                            color: '#555555',
-                            links: '#327f99'
-                          }
-                        },
-                        features: {
-                          scrollbar: false,
-                          loop: true,
-                          live: true,
-                          behavior: 'default'
-                        }
-                      }).render().start();
-                      </script>
+                hello
                   </div>
-                  <div class="tab-pane" id="resources" data-toggle="tab">
+                  <div class="tab-pane" id="resources">
                     <h1>Resources</h1>
                     <ul>
                       <li><a href="http://www.ci.austin.tx.us/fews/rainfall.cfm">Austin Rain Gauges </a>
@@ -148,7 +90,7 @@
                       </li>
                       <li> <a href="http://www.srh.noaa.gov/ewx/">National Weather Service</a>
                       </li>
-                    </ul>
+                    </ul> 
                   </div>
               </div>
             </div>
@@ -179,19 +121,5 @@
       </div>
     </div>
   </footer>
-
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
 </body>
 </html>
