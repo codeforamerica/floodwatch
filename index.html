@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css" />
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css" />
   <link rel="stylesheet" href="css/bootstrap-responsive.css">
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
@@ -51,11 +51,9 @@
         </div>
         <div class="span4">
           <div class="sidebar">
-
-
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
-                <li>
+                <li class="active">
                   <a href="#info" data-toggle="tab"><img src="img/roadclose.png"></a>
                 </li>
                 <li>
@@ -66,19 +64,56 @@
                 </li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane" id="info">
+                <div class="tab-pane active" id="info">
                     <h1>Save yourself! Turn around – don’t drown!</h1>
-                    <p>If there’s water flowing over the road, go back and find another route.
-                    Driving across a flooded road or bridge is the cause of 75% of flood-related fatalities.
-                    It’s illegal to drive around barricades at a flooded road.
-                    </p>  
+                    <ul>
+                      <li>If there’s water flowing over the road, go back and find another route.
+                      </li>
+                      <li>Driving across a flooded road or bridge is the cause of 75% of flood-related fatalities.
+                      </li>
+                      <li>It’s illegal to drive around barricades at a flooded road.
+                      </li>
+                    </ul>  
                 </div>
                 <div class="tab-pane" id="announce">
-                <!-- twitter widget with @atxfloods -->
-                hello
+                
+              <!-- twitter widget with #atxfloods -->
+                      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                      <script>
+                      new TWTR.Widget({
+                        version: 2,
+                        type: 'search',
+                        search: '#atxfloods',
+                        interval: 30000,
+                        title: 'Follow #atxfloods',
+                        subject: '',
+                        width: 'auto',
+                        height: 300,
+                        theme: {
+                          shell: {
+                            background: '#ffffff',
+                            color: '#327c94'
+                          },
+                          tweets: {
+                            background: '#ffffff',
+                            color: '#555555',
+                            links: '#327f99'
+                          }
+                        },
+                        features: {
+                          scrollbar: false,
+                          loop: true,
+                          live: true,
+                          behavior: 'default'
+                        }
+                      }).render().start();
+                      </script>
+
+
+
                   </div>
                   <div class="tab-pane" id="resources">
-                    <h1>Resources</h1>
+                    <h1>Resources &amp; Links</h1>
                     <ul>
                       <li><a href="http://www.ci.austin.tx.us/fews/rainfall.cfm">Austin Rain Gauges </a>
                       </li>
@@ -86,7 +121,7 @@
                       </li>
                       <li><a href="http://hydromet.lcra.org/full.aspx">LCRA Hydromet</a>
                       </li>
-                      <li><a hred="http://waterdata.usgs.gov/tx/nwis/rt">USGS Gauges</a>
+                      <li><a href="http://waterdata.usgs.gov/tx/nwis/rt">USGS Gauges</a>
                       </li>
                       <li><a href="http://www.centraltexashub.org/">Central Texas HUB</a>
                       </li>
@@ -127,11 +162,8 @@
   </footer>
 </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap-tab.js"></script>
-
-
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
 

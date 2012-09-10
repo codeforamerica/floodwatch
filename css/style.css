@@ -145,16 +145,27 @@ td { vertical-align: top; }
   pointer-events:all;
 }
 .sidebar li {
-  list-style: none;
   font-size: 17px;
   font-weight: 300;
-  line-height: 2em;
+}
+#info li {
+    list-style: decimal outside none;
+    margin-left: 25px;
+}
+.key li, #resources li { 
+    line-height: 2em;
+    list-style: none;
 }
 .sidebar h1 {
   font-size: 15px;
   font-variant: normal;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
+  color: #00649B;
+  line-height: 1.4em;
+}
+.sidebar a {
+  color: #BF4B4E;
 }
 .key {
   position: relative;
@@ -175,7 +186,7 @@ td { vertical-align: top; }
 #map {
   height: 600px;
   position: absolute;
-  top: 37px;
+  top: 50px;
   width: 100%;
 }
 .over {
@@ -185,4 +196,9 @@ td { vertical-align: top; }
   pointer-events:none;
   filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
   background:none !important;
+}
+
+.solidback {
+  background: #ffffff;
+  padding: 5px;
 }
