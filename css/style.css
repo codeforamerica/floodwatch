@@ -168,26 +168,37 @@ td { vertical-align: top; }
   color: #BF4B4E;
 }
 .key {
-  position: relative;
+  position: absolute;
   /* height must also be changed in navbar-fixed-bottom bottom px */
   height: 100px;
-  top: -150px;
   color: #555555;
+  bottom:10px;
+  left:10px;
 }
+
 .sidebar h2 {
   font-size: 12px;
   line-height: 20px;
   font-weight: 300;
 }
+.tab-side {
+  width: 300px;
+}
 /* bottom px must be set to height of key */
 .navbar-fixed-bottom {
     bottom: -125px;
 }
-#map {
-  height: 600px;
+#mapCanvas, .row-fluid:before, .row-fluid:after{
   position: absolute;
   top: 50px;
-  width: 100%;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}
+#mapCanvas iframe, .row-fluid:before, .row-fluid:after{
+  width:100%;
+  height:100%;
+  border:0px;
 }
 .over {
   position: relative;

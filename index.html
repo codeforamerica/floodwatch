@@ -39,18 +39,22 @@
   </header>
   <!-- spacer for navbar -->
   <div class="nav-bar-inner-spacer">
-    <ul>
-      <li>Resources</li>
-    </ul>
+
   </div>
   <div role="main">
   <!--Body content-->
     <div class="container-fluid over">
       <div class="row-fluid">
-        <div class="span8">
+        <div class="span3">
+          <div class="sidebar key">
+            <ul>
+              <li><img src="img/key-open.png"> crossing is open</li>
+              <li><img src="img/key-closed.png"> crossing is closed</li>
+            </ul>
+          </div>
         </div>
-        <div class="span4">
-          <div class="sidebar">
+        <div class="span9">
+          <div class="sidebar pull-right tab-side">
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
                 <li class="active">
@@ -133,28 +137,15 @@
       </div>
     </div>
   </div>
-    <div id="map">
+    <div id="mapCanvas">
       <!-- place map add map link here -->
+      <!--<iframe src="https://emily.cartodb.com/tables/lwc_austin/embed_map">
+      </iframe>-->
       <iframe src='https://sharedfews.cartodb.com/tables/lwc_austin/embed_map' width='100%' height='600px'>
       </iframe>
     </div>
 
   </div>
-
-  <footer>
-    <div class="navbar navbar-fixed-bottom">
-        <div class="span3">
-          <div class="sidebar key">
-            <ul>
-              <li><img src="img/key-open.png"> crossing is open</li>
-              <li><img src="img/key-closed.png"> crossing is closed</li>
-            </ul>
-          </div>
-        </div>
-      <div class="navbar-inner">
-      </div>
-    </div>
-  </footer>
 </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

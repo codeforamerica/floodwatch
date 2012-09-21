@@ -1,5 +1,47 @@
-#map {
-  height: 200px;
-  position: relative;
-  width: 80%;
+#mapCanvas {
+	position: absolute;
+	top: 185px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin: 20px;
+	width: 95%;
+	height: 230px;
+}
+.tab-side {
+	top: 260px;
+	position: relative;
+}
+.sidebar {
+  width:90%;
+  height:90%;
+  border:0px;
+  margin-top: 10px;
+}
+
+#mapCanvas iframe{
+  width:90%;
+  height:90%;
+  border:0px;
+}
+.nav-bar-inner-spacer {
+  height: 0px;
+  display: none;
+}
+.key {
+    color: #555555;
+    height: 75px;
+    position: absolute;
+    right: 0;
+    top: -35px;
+    left: 0px;
+    margin: 0px;
+    }
+.key ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: relative;
 }
