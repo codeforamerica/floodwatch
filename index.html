@@ -22,19 +22,16 @@
       <div class="container">
         <ul class="nav">
           <li>
-            <a class="brand" href="#">
-                <img src="img/atxfloods.png" height="37px" width="200px">
-                <div class="tagline">current flood information and road closures in the city of Austin</div>
-            </a>
+          <a class="brand" href="#">
+              <img src="img/atxfloods.png" height="37px" width="200px">
+              <div class="tagline">current flood information and road closures in the city of Austin</div>
+          </a>
           </li>
       </ul>
-        <div class="update">
-        <h5>Most Recent Update:</h5>
-          <div id="twitter"></div>
-        </div> 
       </div>
     </div>
   </div>
+
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header>
 
@@ -149,22 +146,21 @@
 
   </div>
 </body>
-
-  <script>
-    $.getJSON("http://twitter.com/statuses/user_timeline/emilyville.json?callback=?", function(data) {
-     $("#twitter").html(data[0].text);
-    });
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap-tab.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
 
+  <script>
+    $.getJSON("http://twitter.com/statuses/user_timeline/codeforamerica.json?callback=?", function(data) {
+         $("#twitter").html(data[0].text);
+    });
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 
 
 </html>

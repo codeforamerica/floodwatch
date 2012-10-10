@@ -179,20 +179,13 @@ td { vertical-align: top; }
 }
 .update {
     color: #00649B;
-    float: right;
-    right: 20px;
-    width: 500px;
-    height: 50px;
-    position: relative;
-}
-.update h5, .update #twitter {
-  display: inline;
-}
-#twitter {
+    height: 100px;
+    overflow: hidden;
+    padding: 10px;
+    bottom: 200px;
 }
 .update h5{
   color: #BF4B4E;
-  line-height: 12px;
 }
 .sidebar h2 {
   font-size: 12px;
