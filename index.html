@@ -22,17 +22,19 @@
       <div class="container">
         <ul class="nav">
           <li>
-          <a class="brand" href="#">
-              <img src="img/atxfloods.png" height="37px" width="200px">
-              <div class="tagline">current flood information and road closures in the city of Austin</div>
-          </a>
+            <a class="brand" href="#">
+                <img src="img/atxfloods.png" height="37px" width="200px">
+                <div class="tagline">current flood information and road closures in the city of Austin</div>
+            </a>
           </li>
-    </ul>
-       </ul>
+      </ul>
+        <div class="update">
+        <h5>Most Recent Update:</h5>
+          <div id="twitter"></div>
+        </div> 
       </div>
     </div>
   </div>
-
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header>
 
@@ -54,10 +56,11 @@
           </div>
         </div>
         <div class="span9">
-          <div class="sidebar pull-right tab-side">
+            <div class="sidebar pull-right tab-side">
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
                 <li class="active">
+
                   <a href="#info" data-toggle="tab"><img src="img/roadclose.png"></a>
                 </li>
                 <li>
@@ -139,26 +142,29 @@
   </div>
     <div id="mapCanvas">
       <!-- place map add map link here -->
-      <!--<iframe src="https://emily.cartodb.com/tables/lwc_austin/embed_map">
+      <iframe src='https://emily.cartodb.com/tables/lwc_austin_export_2/embed_map'></iframe>
+      <!--<iframe src='https://sharedfews.cartodb.com/tables/lwc_austin/embed_map' width='100%' height='600px'>
       </iframe>-->
-      <iframe src='https://sharedfews.cartodb.com/tables/lwc_austin/embed_map' width='100%' height='600px'>
-      </iframe>
     </div>
 
   </div>
 </body>
+
+  <script>
+    $.getJSON("http://twitter.com/statuses/user_timeline/emilyville.json?callback=?", function(data) {
+     $("#twitter").html(data[0].text);
+    });
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap-tab.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
 
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
 
 
 </html>

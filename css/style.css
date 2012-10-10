@@ -167,15 +167,33 @@ td { vertical-align: top; }
 .sidebar a {
   color: #BF4B4E;
 }
-.key {
+.key, .update {
+  width: 200px;
+  left: 10px;
   position: absolute;
+}
+.key {
   /* height must also be changed in navbar-fixed-bottom bottom px */
   height: 100px;
-  color: #555555;
   bottom:10px;
-  left:10px;
 }
-
+.update {
+    color: #00649B;
+    float: right;
+    right: 20px;
+    width: 500px;
+    height: 50px;
+    position: relative;
+}
+.update h5, .update #twitter {
+  display: inline;
+}
+#twitter {
+}
+.update h5{
+  color: #BF4B4E;
+  line-height: 12px;
+}
 .sidebar h2 {
   font-size: 12px;
   line-height: 20px;
@@ -213,3 +231,5 @@ td { vertical-align: top; }
   background: #ffffff;
   padding: 5px;
 }
+
+
