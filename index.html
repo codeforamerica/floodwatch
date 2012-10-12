@@ -8,6 +8,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>ATX Floods</title>
   <meta name="description" content="">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-tab.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
 
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -40,7 +45,7 @@
   <div class="nav-bar-inner-spacer">
 
   </div>
-  <div role="main">
+  <div role="main" id="main">
   <!--Body content-->
     <div class="container-fluid over">
       <div class="row-fluid">
@@ -146,16 +151,9 @@
 
   </div>
 </body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootstrap-tab.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
 
   <script>
-    $.getJSON("http://twitter.com/statuses/user_timeline/codeforamerica.json?callback=?", function(data) {
-         $("#twitter").html(data[0].text);
-    });
+
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
