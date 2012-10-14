@@ -128,7 +128,6 @@ td { vertical-align: top; }
     color: #555555;
     font-style: italic;
     font-size: 14px;
-    display: inline;
     vertical-align: bottom;
   }
 .sidebar {
@@ -175,17 +174,27 @@ td { vertical-align: top; }
 .key {
   /* height must also be changed in navbar-fixed-bottom bottom px */
   height: 100px;
-  bottom:10px;
+  bottom:100px;
 }
-.update {
+#update-container {
     color: #00649B;
-    height: 100px;
     overflow: hidden;
     padding: 10px;
     bottom: 200px;
+    text-align: right; 
+    vertical-align: bottom;
 }
-.update h5{
+#update-container h5{
   color: #BF4B4E;
+  display: inline;
+}
+#update-container h4{
+  font-size: 12px;
+  display: inline;
+}
+#update-container li, #update-container ul {
+  display: inline;
+  list-style-type: none;
 }
 .sidebar h2 {
   font-size: 12px;
@@ -201,7 +210,7 @@ td { vertical-align: top; }
 }
 #mapCanvas, .row-fluid:before, .row-fluid:after{
   position: absolute;
-  top: 50px;
+  top: 75px;
   bottom:0px;
   left:0px;
   right:0px;
@@ -212,8 +221,13 @@ td { vertical-align: top; }
   border:0px;
 }
 .over {
-  position: relative;
-  top: 20px;
+  border:0px;
+  height:100%;
+  position: absolute;
+  top: 100px;
+  bottom:0px;
+  left:0px;
+  right:0px;  
   z-index: 100;
   pointer-events:none;
   filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');

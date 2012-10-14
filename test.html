@@ -1,6 +1,56 @@
+
+
+  <script src="js/tabletop.js"></script>
+  <script src="js/backbone.tabletopSync.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-hello
-<a class="twitter-timeline" href="https://twitter.com/emilyville" data-widget-id="256781233042890752">Tweets by @emilyville</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="table_info"></div>
+    
+    <div id="explanation"></div>
+    
+    <h2>Let's talk about floods</h2>
+    <ul id="updates"></ul>
 
+<p>Doc:
+https://docs.google.com/spreadsheet/pub?key=0AvUsRT_oqcQvdC1uN2VIUERTLV9IRlBHby1IdjhjU3c&output=html
+</p>
+    <!-- Don't need jQuery for Tabletop, but using it for this example -->
+    <script type="text/javascript">
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AvUsRT_oqcQvdC1uN2VIUERTLV9IRlBHby1IdjhjU3c&output=html';
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ "Current" ],
+                         debug: true } )
+      })
+      function showInfo(data, tabletop) {
+        $("#table_info").text("We found the tables " + tabletop.model_names.join(", "));
+
+        $.each( tabletop.sheets(), function(i, sheet) {
+          $("#table_info").append("<p>" + sheet.name + " has " + sheet.column_names.join(", ") + "</p>");
+        });
+
+        // $.each( tabletop.sheets("Current").all(), function(i, update) {
+        //   var update_li = $('<li><h4>' + update.timestamp + '</h4></li>')
+        //   update_li.append(update.update);
+        //   update_li.appendTo("#updates");
+        // })
+
+        var updates = tabletop.sheets("Current").all();
+        if (updates.length > 0) {
+          var update = updates.slice(-1)[0];
+          var update_li = $('<li><h4>' + update.timestamp + '</h4></li>')
+          update_li.append(update.update);
+          update_li.appendTo("#updates");
+        }
+        
+      }
+
+      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>
+  </body>
+</html>
