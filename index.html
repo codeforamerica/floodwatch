@@ -15,30 +15,31 @@
   <script src="js/backbone.tabletopSync.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="jquery.autoellipsis-1.0.10.js"></script>
 
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css" />
+  <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/small.css" />
   <link rel="stylesheet" href="css/bootstrap-responsive.css">
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
+<div id="update-container" class="pull-right span7">
+  <div id="updates"><h5>Most Current Update&nbsp;</h5>
+  </div><p class="note"><a href="https://docs.google.com/spreadsheet/pub?key=0AvUsRT_oqcQvdC1uN2VIUERTLV9IRlBHby1IdjhjU3c&output=html" target="blank">see all updates</p>
+</div>
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="container">
+      <div class="container-fluid">
         <ul class="nav">
           <li>
           <a class="brand" href="#">
               <img src="img/atxfloods.png" height="37px" width="200px">
-              <div class="tagline">current flood information and road closures in the city of Austin</div>
+              <div class="tagline">current flood information and road closures in Austin</div>
           </a>
           </li>
         </ul>
-        <div id="update-container">
-          <h5>Most Current Update</h5>
-          <ul id="updates"></ul>
-        </div>
       </div>
     </div>
   </div>
@@ -171,11 +172,12 @@ function showInfo(data, tabletop) {
   var updates = tabletop.sheets("Current").all();
   if (updates.length > 0) {
     var update = updates.slice(-1)[0];
-    var update_li = $('<li><h4>' + update.timestamp + '&nbsp;</h4></li>');
-    update_li.append(update.update);
+    var update_li = $('<h4 class="shortentext">' + update.timestamp + '&nbsp;</h4>');
+    update_li.append('<span class="ellipsis_text"><br>' + update.update + '</span>');
     update_li.appendTo("#updates");
   }
 };
+
 
 </script>
 

@@ -1,6 +1,6 @@
 #mapCanvas {
 	position: absolute;
-	top: 185px;
+	top: 320px;
 	bottom:0px;
 	left:0px;
 	right:0px;
@@ -8,6 +8,10 @@
 	width: 95%;
 	height: 230px;
 }
+#update-container {
+  max-height: 90px;
+}
+
 .tab-side {
 	top: 260px;
 	position: relative;
@@ -16,7 +20,8 @@
   width:90%;
   height:90%;
   border:0px;
-  margin-top: 10px;
+  top: 415px;
+  position: relative;
 }
 
 #mapCanvas iframe{
@@ -33,7 +38,7 @@
     height: 75px;
     position: absolute;
     right: 0;
-    top: -35px;
+    top: 125px;
     left: 0px;
     margin: 0px;
     }
