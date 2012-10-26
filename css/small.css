@@ -1,6 +1,6 @@
 #mapCanvas {
 	position: absolute;
-	top: 320px;
+	top: 275px;
 	bottom:0px;
 	left:0px;
 	right:0px;
@@ -10,6 +10,13 @@
 }
 #update-container {
   max-height: 90px;
+  left: 0;
+  max-height: 90px;
+  top: 100px;
+  position: absolute;
+}
+.navbar .nav > li > a {
+  padding: 0px 10px;
 }
 
 .tab-side {
@@ -38,7 +45,7 @@
     height: 75px;
     position: absolute;
     right: 0;
-    top: 125px;
+    top: 90px;
     left: 0px;
     margin: 0px;
     }
